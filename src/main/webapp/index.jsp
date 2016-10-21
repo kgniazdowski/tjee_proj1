@@ -26,18 +26,18 @@
                 <td>Numer lokalu</td>
             </tr>
             <%
-                for (Producent producent : producentController.GetList())
-                {
-                    System.out.println("<tr>: ");
-                    System.out.println("<td>" + producent.getNazwa() + "</td>");
-                    System.out.println("<td>" + producent.getMiasto() + "</td>");
-                    System.out.println("<td>" + producent.getUlica() + "</td>");
-                    System.out.println("<td>" + producent.getKodPocztowy() + "</td>");
-                    System.out.println("<td>" + producent.getNrLokal() + "</td>");
-                    System.out.println("</tr>: ");
+                for (Producent producent : producentController.GetList()) {
+                    out.println("<tr>");
+                    out.println("<td>" + producent.getNazwa() + "</td>");
+                    out.println("<td>" + producent.getMiasto() + "</td>");
+                    out.println("<td>" + producent.getUlica() + "</td>");
+                    out.println("<td>" + producent.getKodPocztowy() + "</td>");
+                    out.println("<td>" + producent.getNrLokalu() + "</td>");
+                    out.println("</tr>");
                 }
             %>
         </table>
+        <a href="getProducentData.jsp">Dodaj producenta</a>
 
         <!-- Wyswietlenie Rowerow -->
         <h2>Rowery:</h2>
@@ -51,14 +51,15 @@
             <%
                 for (Rower rower : rowerController.GetList())
                 {
-                    System.out.println("<tr>: ");
-                    System.out.println("<td>" + rower.getNazwa() + "</td>");
-                    System.out.println("<td>" + rower.getCena() + "</td>");
-                    System.out.println("<td>" + rower.getWielkoscKola() + "</td>");
-                    System.out.println("<td>" + rower.getProducent().getNazwa() + "</td>");
-                    System.out.println("</tr>: ");
+                    out.println("<tr>");
+                    out.println("<td>" + rower.getNazwa() + "</td>");
+                    out.println("<td>" + rower.getCena() + "</td>");
+                    out.println("<td>" + rower.getWielkoscKola() + "</td>");
+                    out.println("<td>" + rower.getProducent().getNazwa() + "</td>");
+                    out.println("</tr>");
                 }
             %>
         </table>
+        <a href="getRowerData.jsp">Dodaj rower</a>
     </body>
 </html>

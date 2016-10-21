@@ -8,11 +8,9 @@ public class Producent {
     String miasto;
     String ulica;
     String kodPocztowy;
-    String nrLokal;
+    String nrLokalu;
 
-    public String getNazwa() {
-        return nazwa;
-    }
+    public String getNazwa() { return nazwa; }
 
     public String getMiasto() {
         return miasto;
@@ -26,8 +24,8 @@ public class Producent {
         return kodPocztowy;
     }
 
-    public String getNrLokal() {
-        return nrLokal;
+    public String getNrLokalu() {
+        return nrLokalu;
     }
 
     public void setNazwa(String nazwa) {
@@ -46,7 +44,7 @@ public class Producent {
         this.kodPocztowy = kodPocztowy;
     }
 
-    public void setNrLokal(String nrLokal) {
-        this.nrLokal = nrLokal;
+    public void setNrLokalu(String nrLokalu) {
+        this.nrLokalu = nrLokalu;
     }
 }
