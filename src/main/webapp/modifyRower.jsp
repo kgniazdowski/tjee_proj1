@@ -23,9 +23,6 @@
     rowerController.UpdateRower(request.getParameter("modifiedRower"), rower);
 %>
 <h2>Zmodyfikowano producenta:</h2>
-<p><%= rower.getNazwa() %></p><br />
-<p><%= rower.getProducent().getNazwa() %></p><br />
-<p>Stara nazwa: <%= request.getParameter("modifiedRower") %></p>
 
 <a href="index.jsp">Wyswietl zawartosc bazy</a>
 </body>

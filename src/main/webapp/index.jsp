@@ -15,6 +15,8 @@
         <jsp:useBean id="producentController" class="com.RowerLand.controller.ProducentController" scope="application" />
         <h1>Baza danych RowerLand'u</h1>
 
+        <a href="calculator">Kalkulator cali</a>
+
         <!-- Wyswietlenie Producentow -->
         <h2>Producenci:</h2>
         <table border="2">
@@ -89,9 +91,10 @@
                     out.println("</tr>");
                 }
             %>
-        </table>
-        <a href="getRowerData.jsp">Dodaj</a>
-        <a href="getRowerToDelete.jsp">Usun</a>
-        <a href="getRowerToModify.jsp">Modyfikuj</a>
+    </table>
+    <a href="getRowerToDelete.jsp">Usun</a>
+    <a href="getRowerData.jsp">Dodaj</a>
+    <a href="getRowerToModify.jsp">Modyfikuj</a>
+
     </body>
 </html>
