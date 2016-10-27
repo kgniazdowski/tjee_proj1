@@ -26,6 +26,34 @@
                 <td>Numer lokalu</td>
             </tr>
             <%
+                //Temporary data
+                /*Producent pr = new Producent();
+                pr.setNazwa("EloBike");
+                pr.setUlica("3 Maja");
+                pr.setNrLokalu("12");
+                pr.setKodPocztowy("83-330");
+                pr.setMiasto("Zukowo");
+                Rower r = new Rower();
+                r.setNazwa("Elo");
+                r.setCena(4999);
+                r.setWielkoscKola(13.9);
+                r.setProducent(pr);
+                rowerController.AddRower(r);
+                producentController.AddProducent(pr);
+                pr = new Producent();
+                pr.setNazwa("ByeBike");
+                pr.setUlica("Wallerianska");
+                pr.setNrLokalu("81");
+                pr.setKodPocztowy("80-800");
+                pr.setMiasto("Gdansk");
+                producentController.AddProducent(pr);
+                r = new Rower();
+                r.setNazwa("Bye");
+                r.setCena(1998);
+                r.setWielkoscKola(14.8);
+                r.setProducent(pr);
+                rowerController.AddRower(r);*/
+
                 for (Producent producent : producentController.GetList()) {
                     out.println("<tr>");
                     out.println("<td>" + producent.getNazwa() + "</td>");
@@ -37,7 +65,9 @@
                 }
             %>
         </table>
-        <a href="getProducentData.jsp">Dodaj producenta</a>
+        <a href="getProducentData.jsp">Dodaj</a>
+        <a href="getProducentToDelete.jsp">Usuń</a>
+        <a href="getProducentToModify.jsp">Modyfikuj</a>
 
         <!-- Wyswietlenie Rowerow -->
         <h2>Rowery:</h2>
@@ -60,6 +90,8 @@
                 }
             %>
         </table>
-        <a href="getRowerData.jsp">Dodaj rower</a>
+        <a href="getRowerData.jsp">Dodaj</a>
+        <a href="getRowerToDelete.jsp">Usun</a>
+        <a href="getRowerToModify.jsp">Modyfikuj</a>
     </body>
 </html>
