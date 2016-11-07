@@ -15,7 +15,7 @@
 <jsp:useBean id="rower" class="com.RowerLand.model.Rower" scope="session" />
 <jsp:useBean id="rowerController" class="com.RowerLand.controller.RowerController" scope="application"/>
 <jsp:useBean id="producentController" class="com.RowerLand.controller.ProducentController" scope="application" />
-<h2>Dodaj Producenta:</h2>
+<h2>Dodaj Rower:</h2>
 <form action="addRower.jsp">
     Nazwa: <input type="text" name="nazwa" /><br />
     Cena: <input type="text"  name="cena" /><br />

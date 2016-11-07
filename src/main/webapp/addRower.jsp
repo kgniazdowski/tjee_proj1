@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.RowerLand.ValidatorSingleton" %><%--
   Created by IntelliJ IDEA.
   User: Kamil
   Date: 19.10.2016

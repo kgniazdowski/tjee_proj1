@@ -14,10 +14,8 @@
 <jsp:useBean id="producentController" class="com.RowerLand.controller.ProducentController" scope="application" />
 <jsp:useBean id="producent" class="com.RowerLand.model.Producent" scope="session" />
 <jsp:setProperty name="producent" property="*" />
-<h2>Zmodyfikowano producenta:</h2>
+<h2>Zmodyfikowano producenta</h2>
 <%
-    out.println(producent.getNazwa());
-    out.println(producent.getMiasto());
     producentController.UpdateProducent(request.getParameter("modifiedProducent"), producent);
 %>
 

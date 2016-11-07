@@ -2,8 +2,8 @@
 <%@ page import="com.RowerLand.model.Rower" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE HTML>
 
 <html>
     <head>
@@ -55,17 +55,16 @@
                 r.setWielkoscKola(14.8);
                 r.setProducent(pr);
                 rowerController.AddRower(r);*/
-
-                for (Producent producent : producentController.GetList()) {
-                    out.println("<tr>");
-                    out.println("<td>" + producent.getNazwa() + "</td>");
-                    out.println("<td>" + producent.getMiasto() + "</td>");
-                    out.println("<td>" + producent.getUlica() + "</td>");
-                    out.println("<td>" + producent.getKodPocztowy() + "</td>");
-                    out.println("<td>" + producent.getNrLokalu() + "</td>");
-                    out.println("</tr>");
-                }
             %>
+            <c:forEach var="item" items="${producentController.GetList()}">
+                <tr>
+                    <td><c:out value="${item.nazwa}" /></td>
+                    <td><c:out value="${item.miasto}" /></td>
+                    <td><c:out value="${item.ulica}" /></td>
+                    <td><c:out value="${item.kodPocztowy}" /></td>
+                    <td><c:out value="${item.nrLokalu}" /></td>
+                </tr>
+            </c:forEach>
         </table>
         <a href="getProducentData.jsp">Dodaj</a>
         <a href="getProducentToDelete.jsp">Usuń</a>
@@ -80,20 +79,17 @@
                 <td>Wielkosc kola</td>
                 <td>Producent</td>
             </tr>
-            <%
-                for (Rower rower : rowerController.GetList())
-                {
-                    out.println("<tr>");
-                    out.println("<td>" + rower.getNazwa() + "</td>");
-                    out.println("<td>" + rower.getCena() + "</td>");
-                    out.println("<td>" + rower.getWielkoscKola() + "</td>");
-                    out.println("<td>" + rower.getProducent().getNazwa() + "</td>");
-                    out.println("</tr>");
-                }
-            %>
+            <c:forEach var="item" items="${rowerController.GetList()}">
+                <tr>
+                    <td><c:out value="${item.nazwa}" /></td>
+                    <td><c:out value="${item.cena}" /></td>
+                    <td><c:out value="${item.wielkoscKola}" /></td>
+                    <td><c:out value="${item.producent.nazwa}" /></td>
+                </tr>
+            </c:forEach>
     </table>
-    <a href="getRowerToDelete.jsp">Usun</a>
     <a href="getRowerData.jsp">Dodaj</a>
+    <a href="getRowerToDelete.jsp">Usun</a>
     <a href="getRowerToModify.jsp">Modyfikuj</a>
 
     </body>
